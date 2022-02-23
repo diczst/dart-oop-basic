@@ -1,5 +1,3 @@
-import 'dart:svg';
-
 class RectangleArea {
   // underscore mean private property
   // dengan private access

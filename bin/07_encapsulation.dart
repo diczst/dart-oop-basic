@@ -10,6 +10,7 @@ main() {
   rectArea.setLength(-2);
   rectArea.width = 3;
 
+// akses nilai pake method tidak secara langsung
   print(rectArea.getLength());
 
 // tidak menghasilkan minus
