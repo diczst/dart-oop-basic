@@ -1,6 +1,6 @@
-import 'package:belajar_dart_opp/char.dart';
-import 'package:belajar_dart_opp/hero.dart';
-import 'package:belajar_dart_opp/villain.dart';
+import 'package:belajar_dart_opp/inheritance/char.dart';
+import 'package:belajar_dart_opp/inheritance/hero.dart';
+import 'package:belajar_dart_opp/inheritance/villain.dart';
 
 main() {
   Hero yasuo = Hero();
