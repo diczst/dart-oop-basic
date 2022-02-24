@@ -1,18 +1,27 @@
-import 'package:belajar_dart_opp/inheritance/char.dart';
-import 'package:belajar_dart_opp/inheritance/hero.dart';
+import 'package:belajar_dart_opp/abstractclass/chair.dart';
+import 'package:belajar_dart_opp/abstractclass/pen.dart';
+import 'package:belajar_dart_opp/abstractclass/thing.dart';
 
 void main(List<String> args) {
-  // List<Character> characterObjects = [];
+  List<Benda> things = [];
 
-  // kita tidak bisa menambahkan sesuatu objek seperti Hero()
-  // karena hero atau pahlawan itu tidak ada wujudnya hanya konsep bahasa saja
-  // harus ada spesifikasinya seperti objek Yasuo() yang diketahui ada wujudnya
+  // dapat menambahkan objek Kursi()
+  things.add(Kursi());
 
-  // characterObjects.add(Hero()); XX seharusnya tidak ada objek hero
+  // dapat menambahkan objek Pena()
+  things.add(Pena());
 
-  // maka dijadikan abstract class saja sesuatu yang abstract (tak berwujud)
+  // tidak dapat menambahkan Benda()
+  // things.add(Benda()); // error
 
-  // cara memahaminya sebagai berikut.
+  // kita tidak bisa menambahkan sesuatu objek seperti Benda()
+  // karena Benda itu tidak ada wujudnya hanya konsep bahasa saja
+  // harus ada spesifikasinya seperti benda Sapu() yang diketahui ada wujudnya
+
+  // saat suatu class dijadikan abstract maka class itu tidak bisa lagi
+  // ditambahkan atau diperlakukan seperti objek sehingga akan error bila dipaksa
+
+  // cara memahaminya secara pragmatis sebagai berikut.
 
   // saya katakan pada seseorang : tolong ambilkan saya benda
   // umumnya seseorang itu akan bertanya benda apa yang ingin diambil?
@@ -26,12 +35,17 @@ void main(List<String> args) {
   // saat saya katakan sebuah sapu, barulah ia ambilkan sapu karena sapu itu objek
   // bisa dilihat wujudnya secara nyata.
 
-  // abstract class tidak terdapat atribut
-  // hanya terdapat method saja, method ini pun bersifat
-  // umum seperti benda methodnya misalnya use
-  // objek yang merupakan subclass dari abstract class
-  // wajib mengimplementasikan use itu, tetapi use
-  // untuk setiap objek benda itu berbeda beda
-  // sapu merupakan benda  fungsinyanya sapu adalah menyapu
-  // pensil merupakan benda fungsinya pensil adalah menulis
+  // abtraksi digunakan untuk penyederhanaan
+  // misalkan anda membawa sapu,baterai,mouse,baju,celana, kabel, botol, kancing
+  // dalam sebuah tas. Saya bertanya pada anda apa yang kamu bawa?
+  // tanpa kata abstrak "benda" anda harus menyebutkan satu-persatu objek itu
+  // tetapi dengan hadirnya suatu abstraksi yaitu kata "benda" anda dapat menyebutkan
+  // "saya membawa benda"
+
+  // abstract class tidak terdapat atribut atau variabel malainkan method saja
+  // method ini bersifat wajib diterapkan pada setiap class yang mewarisi abstract class
+
+  // catatan selanjutnya lihat abstract class benda pada file thing.dart
+
+  // lanjutan setelah catatan thing.dart
 }
